@@ -116,7 +116,7 @@
 
 \section{Introduction}
 
-This paper describes how EvoSuite works, \citet{fraser2011evosuite}.
+This paper describes how EvoSuite works: \citet{fraser2011evosuite}.
 
 This is my introduction. \citet{Shaw2003WritingGoodSoftwareEngineeringResearchPapersMinitutorial} wrote a paper with hints on how to write good software engineering research papers. By the way, this was an example for using the \textit{natbib} command \texttt{\textbackslash{}citet\{\}}.
 
@@ -129,11 +129,17 @@ Our contributions consist of...(Am Ende der introduction sollt ihr klar (in eine
 
 \section{Background}\label{sec:anotherSection}
 
+Software-testing within software-engineering deals with systematically verifying the functionality of the tested program and thereby assuring its quality. For increasing the efficiency of writing test-cases automated methods that seek to generate test-cases by iterating through a possible search-space are being used. A comprehensive comparison of both a traditional and a novel approach in search-based software testing is offered by Rojas et al. \citep{rojas2017detailed}. A common scenario for software-based software testing consists in generating "a set of test cases maximizing their code coverage or maximizing their fault detection capability" being branch coverage a de facto standard coverage criterion within the reasearch field. Furthermore it states that the traditional approach can be characterized as a single goal approach, i.e. that each coverage goal is approximated individually. Whereas for the novel \textit{whole test suite} approach proposed by Rojas et al. "the problem is changed to a search for a set of tests that covers all coverage goals at the same time", thereby solving two issues of the traditional approach, which are given by the \textit{search budget distribution problem} and the \textit{ordering of the coverage goals}. The former consisting in the fact, that the infeasibility of coverage goals is an undecidable problem, which means that a test generation software could unnecessarily spend ressources on test generation for a coverage goal that could never be reached. The latter ...TODO
+
+A detailed description for the traditional approach is provided by McMinn \citep{mcminn2004search} and Wegener \citep{wegener2001evolutionary},  whereas a more detailed description of the whole test suite approach can be found at Fraser and Arcuri \citep{fraser2015achieving}.
+
 \subsection{Problem Description} 
 
+
+TODO:
 ....(Erklärt das behandelte Problem und warum dessen Lösung wichtig ist. Gebt dem Leser ausreichend Hintergrundinformationen um eure Arbeit zu verstehen. Stellt die benutzten/behandelten Tools dar und ggf. eure durchgeführten Modifikationen. Gebt ausreichend exemplarisches Material in Form von figures, tables, etc.)
 
-  \textit{AspectJ} can be used to weave cross-cutting concerns into Java programs \citep{AspectJ2007}. By the way, this was an example for using the \textit{natbib} command \texttt{\textbackslash{}citep\{\}}.
+That's all template stuff:  \textit{AspectJ} can be used to weave cross-cutting concerns into Java programs \citep{AspectJ2007}. By the way, this was an example for using the \textit{natbib} command \texttt{\textbackslash{}citep\{\}}.
 
   We will now demonstrate how to use subfigures (see Figure~\ref{fig:subfig}). Figure~\ref{fig:circle} shows a circle. A star is displayed in Figure~\ref{fig:star}.
 
@@ -167,6 +173,8 @@ Our contributions consist of...(Am Ende der introduction sollt ihr klar (in eine
     
     \subsection{Related Work}
     ...Geht kurz auf themenverwandte Arbeiten ein. Was unterscheidet eure Arbeit von anderen Ansätzen, etc.?
+    
+    \citep{rojas2017detailed}
 
 \section{Conclusions}\label{sec:conclusions}
 
