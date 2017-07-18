@@ -120,6 +120,43 @@
 
   Section~\ref{sec:anotherSection} presents everything one must know. The conclusions follow in Section~\ref{sec:conclusions}.
 
+
+
+\section{Evaluation}
+The goal of our experiments was to compare the whole test suite generation approach with the single goal approach. When comparing both approaches, we focused on branch coverage. The branch coverage of a test suite is computed as the fraction of program branches executed by the test suite. 
+\subsection{Case study subjects}
+For our evaluation, we chose the Joda-Time\footnote[1]{\url{https://github.com/JodaOrg/joda-time}} library, which is an open-source library for working with dates and times, including various date-time calculations. It was originally developed as an alternative for the Java date and time classes, but has been replaced by the \texttt{java.time} API included in Java SE 8. We have evaluated the different approaches on 10 classes of Joda-Time. An overview of the case study subjects is given in Figure \ref{fig:subjects}.
+
+
+\begin{figure} 
+\centering
+\begin{tabular}{l c c} \hline
+Class & \#Branches & LOC\footnote[1]{} \\ \hline
+DateMidnight & 117 & 96 \\
+DateTime & 168 & 620 \\
+DateTimeComparator & 54 & 101 \\
+DateTimeField & 1 & 54 \\
+DateTimeFieldType & 133 & 299 \\
+DateTimeUtils & 57 & 206 \\
+DateTimeZone & 194 & 577 \\
+Days & 65 & 160 \\
+Hours & 67 & 163 \\
+LocalDate & 221 & 654 \\ \hline
+$\Sigma$&1077&2930 
+\end{tabular}
+\caption{Number of branches and LOC of the case study subjects. LOC (Lines of code) is the number of non-comment source code lines and was computed using cloc (\url{https://github.com/AlDanial/cloc}).\label{fig:subjects}}
+\end{figure}
+
+\subsection{Experimental Setup}
+The experiments were essentially run on the standard configuration of EvoSuite. The tool itself is highly configurable, for example it is possible to set several parameters (e.g. crossover and mutation probability) and to choose between different genetic algorithms and search strategies. However, we decided against modifying any parameters (except for the timeout, which has been set to 90 seconds) because the tool already comes with tuned parameters. 
+
+Since the search strategy of EvoSuite is based on randomized algorithms, different runs may produce different results. For this reason, we have run each experiment three times in a row.
+
+The experiments were conducted on a machine running macOS 10.12.5 featuring an 2,6 GHz Intel Core i5 and 16 GB of memory.
+
+\subsection{Whole test suite generation vs. traditional single goal approach}
+In our first set of experiments, we directly compared the whole test suite approach with the traditional single goal approach. While this has already been done in several other studies (and also on the Joda-Time library), the following results can be seen as an attempt to reproduce the results.
+
 \section{Another Section}\label{sec:anotherSection}
 
   \textit{AspectJ} can be used to weave cross-cutting concerns into Java programs \citep{AspectJ2007}. By the way, this was an example for using the \textit{natbib} command \texttt{\textbackslash{}citep\{\}}.
@@ -141,7 +178,8 @@
 \section{Conclusions}\label{sec:conclusions}
 
   These are my conclusions.
-
+\section{Related Work}
+Experiments by Fraser et al., have used traditional single goal approach; other Paper used it in the context of procedural programs.
 \bibliography{template}
 
 \end{document}
